@@ -1,16 +1,13 @@
-
-const addBtn = document.getElementById('btn');
-
-// Create container tag with js dom
-addBtn.addEventListener('click', function() {
-    const item = document.createElement('li');
-    item.classList.add('list-item');
-    item.innerText = 'item added';
-    document.body.appendChild(item);
-
-
-    item.addEventListener('click', function (event) {
-    
-        event.target.parentNode.removeChild(event.target);
-    });
+const container = document.getElementById('container');
+container.addEventListener('click', function () {
+    console.log('you are clicked container');
+})
+const items = document.getElementById('items');
+items.addEventListener('click', function (event) {
+    console.log('you are clicked ul');
+})
+const listItem = document.getElementById('item2');
+listItem.addEventListener('click', function(event) {
+    event.stopPropagation();
+    console.log('Item two is selected');
 })
