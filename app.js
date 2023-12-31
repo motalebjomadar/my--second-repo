@@ -1,13 +1,13 @@
-const container = document.getElementById('container');
-container.addEventListener('click', function () {
-    console.log('you are clicked container');
-})
-const items = document.getElementById('items');
-items.addEventListener('click', function (event) {
-    console.log('you are clicked ul');
-})
-const listItem = document.getElementById('item2');
-listItem.addEventListener('click', function(event) {
-    event.stopPropagation();
-    console.log('Item two is selected');
+document.getElementById('deposit-button').addEventListener('click', function() {
+    const depositInput = document.getElementById('amountIn');
+    const newDepositAmountText = depositInput.value;
+    const newDepositAmount = parseFloat(newDepositAmountText);
+    
+    const depositTotal = document.getElementById('show-deposit-amount');
+    const previousDepositText = depositTotal.innerText;
+    const previousDepositAmount = parseFloat(previousDepositText);
+    const newDepositTotal = previousDepositAmount + newDepositAmount;
+    depositTotal.innerText = newDepositTotal;
+    
+    depositInput.value = '';
 })
