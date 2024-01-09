@@ -1,53 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/41eb106ad4.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
-    <section id="banking-area" class="grid grid-cols-3 gap-4 w-3/4 mx-auto mt-8">
+    <div class="mx-44 my-44">
+        <i id="minus-button" class="fa-solid fa-minus bg-purple-200 p-2"></i>
+        <input value="1" id="input-field" type="number" class="bg-gray-300 text-center ">
+        <i id="plus-button" class="fa-solid fa-plus bg-purple-200 p-2"></i>
+        <h5>$<span id="total-price">60</span></h5>
+    </div>
 
-
-        <div id="deposit" class="bg-sky-300 text-white font-bold p-4 text-center rounded">
-            <h3 id="deposit-title">DEPOSIT</h3>
-            <h2 class="text-xl">$<span id="show-deposit-amount">00</span></h2>
-        </div>
-
-        <div id="withdraw" class="bg-orange-300 text-white font-bold p-4 text-center rounded">
-            <h3 id="widthdraw-title">WITHDRAW</h3>
-            <h2 class="text-xl">$<span id="withdraw-total">00</span></h2>
-        </div>
-
-        <div id="balance" class="bg-lime-300 text-white font-bold p-4 text-center rounded">
-            <h3 id="currentBalanceTitle">BALANCE</h3>
-            <h2 class="text-xl">$<span id="total-amount">00</span></h2>
-        </div>
-
-
-    </section>
-
-    <!-- 00000000000000000000000000000000000000000000 -->
-
-    <section id="banking-area" class="grid grid-cols-2 gap-4 w-3/4 mx-auto mt-8">
-
-        <div id="deposit"
-            class="grid grid-rows-2 gap-4 bg-indigo-300 text-white font-bold p-4 text-center rounded text-xl">
-            <input id="amountIn" class="w-3/4 mx-auto rounded text-black pl-2" type="text">
-            <button id="deposit-button" class="bg-rose-500 w-2/5 mx-auto rounded p-2">DEPOSIT IN</button>
-        </div>
-
-        <div id="withdraw"
-            class="grid grid-rows-2 gap-4 bg-fuchsia-300 text-white font-bold p-4 text-center rounded text-xl">
-            <input id="withdraw-input" class="w-3/4 mx-auto rounded text-black pl-2" type="text">
-            <button id="withdraw-button" class="bg-pink-700 w-2/5 mx-auto rounded p-2">WITHDRAW</button>
-        </div>
-
-    </section>
-    <script src="app.js"> </script>
+    <script src="shopping.js"> </script>
 </body>
-
 </html>
