@@ -1,22 +1,24 @@
-function updateInputNumber(isIncreasing) {
-    const inputNumber = document.getElementById('input-field');
-    const inputValue = inputNumber.value ;
-    if(isIncreasing == true ){
-        inputNumber.value = parseInt(inputValue) + 1 ;
+function updateInputNumber(isIncreasing){
+    const inputField = document.getElementById('input-field');
+    let inputNumber = inputField.value ;
+    if(isIncreasing==true){
+        inputNumber = parseInt(inputNumber) + 1 ;
     }
-    else if(inputValue > 0 ){
-        inputNumber.value = parseInt(inputValue) - 1 ;
+    else if(inputNumber > 0 ){
+        inputNumber = parseInt(inputNumber) - 1 ;
     }
-
-    const totalAmount = document.getElementById('total-price');
-    totalAmount.innerText = inputNumber.value * 60 ;
+    inputField.value = inputNumber ;
+    // update total
+    const totalPrice = document.getElementById('product-price');
+    totalPrice.innerText = inputNumber * 60 ;
 }
 
-document.getElementById('plus-button').addEventListener('click',function(){
+document.getElementById('plus-button').addEventListener('click', function() {
     updateInputNumber(true);
 })
+document.getElementById('minus-button').addEventListener('click',function() {
+    updateInputNumber();
+})
 
-document.getElementById('minus-button').addEventListener('click',function(){
-    
-    
-    updateInputNumber(false);
+
+
